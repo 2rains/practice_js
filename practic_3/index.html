@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script src="main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+      const products = [
+        { 제품명: "삼다수", 가격: 500, 무게: 600 },
+        { 제품명: "제로콜라", 가격: 1000, 무게: 500 },
+        { 제품명: "비락식혜", 가격: 700, 무게: 800 },
+        { 제품명: "포도주스", 가격: 1500, 무게: 500 },
+        { 제품명: "딸기스무디", 가격: 5000, 무게: 700 },
+      ];
+
+      const result = _.orderBy(products, ["가격", "무게"], ["desc", "asc"]);
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>
