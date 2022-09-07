@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script>
+      console.log("Hello");
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const coverList = document.querySelectorAll(".cover"); // 클래스 cover가져옴
+        console.log(coverList);
+
+        coverList.forEach((item, idx, all) => {
+          // .cover배열 요소 각각 가져옴
+          item.setAttribute(
+            //item=값을 하나씩 가져옴
+            "src", // src 요소에 밑의 주소 넣음
+            `https://api.lorem.space/image/album?w=1${idx * 2}0&h=150`
+          );
+          console.log(item);
+        });
+
+        // imgEle.setAttribute(
+        //   "src",
+        //   "https://api.lorem.space/image/album?w=400&h=250"
+        // );
+
+        // const attr = imgEle.getAttribute("src");
+        // console.log(`src속성값${attr}`);
+      });
+    </script>
+    <style>
+      div {
+        color: rgb(87, 62, 201);
+        font-size: 20px;
+      }
+      #sun {
+        color: royalblue;
+      }
+      .sun {
+        color: rgb(252, 227, 87);
+      }
+      #container {
+        background-color: rgb(228, 113, 148);
+      }
+      #container span {
+        font-weight: bold;
+      }
+      #container #moon {
+        color: chartreuse;
+      }
+      #container .sun {
+        border: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sunmoon btn btn -blue">DIV 태그지롱</div>
+
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+    <img src="" alt="" class="cover" />
+
+    <!-- <img src="https://api.lorem.space/image/album?w=150&h=150" alt="" /> -->
+    <img src="" alt="" class="cover" />
+
+    <script>
+      // let a = 0;
+      // const sun = document.querySelector("#sun");
+      // // sun.addEventListener();
+
+      // document.addEventListener("dblclick", () => {
+      //   console.log(`${a++}번째 클릭함`);
+      // document.addEventListener("mousedown", () => {
+      //   console.log("버튼 눌림");
+      // });
+      // document.addEventListener("mouseup", () => {
+      //   console.log("버튼 떼짐");
+      // });
+      // const result = document.querySelector(".sunmoon");
+      // console.log(result);
+      // const result = document.querySelector("#container .sun");
+      // console.log(result);
+
+      // const result2 = document.querySelectorAll("div, span, .sun");
+      // console.log(result2);
+      // const result = document.getElementById("moon");
+      // console.log(result.textContent);
+
+      // const result2 = document.getElementsByClassName("sun");
+      // console.log(result2[0].textContent);
+
+      // const result3 = document.getElementsByTagName("span");
+      // console.log(result3[0].textContent);
+
+      // const result4 = document.getElementsByName("bi");
+      // console.log(result4[0].textContent);
+    </script>
+  </body>
+</html>
